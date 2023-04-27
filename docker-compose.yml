@@ -89,16 +89,16 @@ services:
     command: -config.file=/etc/loki/local-config.yaml
     restart: "always"
 
-  promtail:
-    image: grafana/promtail:2.8.0
-    volumes:
-      - ./promtail/config.yml:/etc/promtail/config.yml
-      - /workspaces/vault-monitoring/vault/logs:/var/log/vault
-    ports:
-      - 9080:9080
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    command: -config.file=/etc/promtail/config.yml
-    depends_on:
-      - loki
-    restart: "always"
+  # promtail:
+  #   image: grafana/promtail:2.8.0
+  #   volumes:
+  #     - ./promtail/config.yml:/etc/promtail/config.yml
+  #     - /workspaces/vault-monitoring/vault/logs:/var/log/vault
+  #   ports:
+  #     - 9080:9080
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   command: -config.file=/etc/promtail/config.yml
+  #   depends_on:
+  #     - loki
+  #   restart: "always"
