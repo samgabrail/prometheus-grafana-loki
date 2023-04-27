@@ -1,6 +1,6 @@
 # Overview
 
-A monitoring stack with Prometheus, Loki, and Grafana.
+A monitoring stack with Prometheus, Loki, and Grafana. Using this with Vault 202 course. CAREFUL if making modifications!
 
 ## Start the Monitoring stack
 
