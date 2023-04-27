@@ -46,10 +46,10 @@ scrape_configs:
       #    authorization:
       #      credentials_file: /etc/prometheus/prometheus-token
     scheme: https
-    # tls_config:
-    #   insecure_skip_verify: true
+    tls_config:
+      insecure_skip_verify: true
     static_configs:
-      - targets: ['localhost:8200']
+      - targets: ['vault-dev.vault202.local:8200']
 
   - job_name: node-exporter
     scrape_interval: 5s
