@@ -47,7 +47,7 @@ scrape_configs:
       #      credentials_file: /etc/prometheus/prometheus-token
     scheme: https
     tls_config:
-      ca_file: /etc/prometheus/vault-lb-ca.pem
+      ca_file: /tmp/monitoring/prometheus/vault-lb-ca.pem
       # insecure_skip_verify: true
     static_configs:
       - targets: ['vault-dev.vault202.local:8200']
